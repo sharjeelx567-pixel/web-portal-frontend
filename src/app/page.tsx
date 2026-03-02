@@ -107,12 +107,12 @@ export default function HomePage() {
         {/* Hero / Header Section */}
         <div className="relative mb-12 md:mb-16">
           <motion.div
-          className="absolute top-[-100px] left-[-100px] w-64 h-64 bg-primary/5 blur-[120px] rounded-full z-0"
-          animate={{ opacity: [0.4, 0.7, 0.4] }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        />
+            className="absolute top-[-100px] left-[-100px] w-64 h-64 bg-primary/5 blur-[120px] rounded-full z-0"
+            animate={{ opacity: [0.4, 0.7, 0.4] }}
+            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          />
 
-            <ScrollReveal direction="left" distance={56} className="relative z-10">
+          <ScrollReveal direction="left" distance={56} className="relative z-10">
             <motion.div
               className="flex justify-start mb-6"
               initial={{ opacity: 0, y: 8 }}
@@ -129,7 +129,7 @@ export default function HomePage() {
                 className="block text-accent uppercase"
                 initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3, duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+                transition={{ delay: 0.3, duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] as const }}
               >
                 Our Core <br />
               </motion.span>
@@ -137,7 +137,7 @@ export default function HomePage() {
                 className="text-primary italic uppercase inline-block relative"
                 initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.45, duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+                transition={{ delay: 0.45, duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] as const }}
               >
                 Capabilities.
                 <span className="absolute -bottom-1 left-0 w-16 h-0.5 bg-primary rounded-full" />

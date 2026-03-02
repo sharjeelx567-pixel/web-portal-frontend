@@ -54,7 +54,7 @@ export function HeroVideo({
 
       const playPromise = video.play()
       if (playPromise !== undefined) {
-        playPromise.catch(() => {})
+        playPromise.catch(() => { })
       }
     }
   }, [hasError, isYouTube])
@@ -65,13 +65,13 @@ export function HeroVideo({
       <motion.section
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+        transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] as const }}
         className={`${wrapperClass} ${!asBackground ? sectionBg : ''}`}
       >
         <motion.div
           initial={asBackground ? {} : { scale: 1.05 }}
           animate={{ scale: 1 }}
-          transition={{ duration: asBackground ? 0 : 1.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+          transition={{ duration: asBackground ? 0 : 1.2, ease: [0.25, 0.46, 0.45, 0.94] as const }}
           className="absolute inset-0"
         >
           <iframe
@@ -98,14 +98,14 @@ export function HeroVideo({
     <motion.section
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+      transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] as const }}
       className={`${wrapperClass} ${!asBackground ? sectionBg : ''}`}
     >
       {!hasError ? (
         <motion.video
           initial={{ scale: 1.03 }}
           animate={{ scale: 1 }}
-          transition={{ duration: 1, ease: [0.25, 0.46, 0.45, 0.94] }}
+          transition={{ duration: 1, ease: [0.25, 0.46, 0.45, 0.94] as const }}
           ref={videoRef}
           autoPlay
           muted

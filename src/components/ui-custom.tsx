@@ -27,7 +27,7 @@ export function ProjectCard({ project }: { project: Project }) {
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-40px" }}
-            transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
+            transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] as const }}
             whileHover={{ y: -6, transition: { duration: 0.25 } }}
             className="group bento-card card-bg-1 flex flex-col h-full hover:shadow-xl hover:shadow-primary/10 border-border/50 backdrop-blur-sm"
         >
@@ -205,7 +205,7 @@ export function BlogCard({ post }: { post: BlogPost }) {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-30px" }}
-            transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
+            transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] as const }}
             whileHover={{ y: -4, boxShadow: "0 20px 40px -12px rgba(0,0,0,0.08)" }}
             className="group card-bg-2 rounded-xl overflow-hidden border border-border/50 hover:border-primary/40 transition-all duration-300 flex flex-col h-full shadow-sm hover:shadow-lg backdrop-blur-sm"
         >
@@ -255,7 +255,7 @@ export function ResourceCard({ link }: { link: PortalLink }) {
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-20px" }}
-            transition={{ duration: 0.45, ease: [0.25, 0.46, 0.45, 0.94] }}
+            transition={{ duration: 0.45, ease: [0.25, 0.46, 0.45, 0.94] as const }}
             whileHover={{ y: -4, boxShadow: "0 16px 32px -8px rgba(0,0,0,0.06)" }}
             className="group card-bg-5 p-5 rounded-xl border border-border/50 hover:border-primary/40 transition-all duration-300 cursor-pointer shadow-sm hover:shadow-lg backdrop-blur-sm"
         >

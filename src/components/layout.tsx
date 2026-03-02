@@ -99,7 +99,7 @@ export function Navbar() {
                             initial={{ opacity: 0, y: -12, scale: 0.98 }}
                             animate={{ opacity: 1, y: 0, scale: 1 }}
                             exit={{ opacity: 0, y: -12, scale: 0.98 }}
-                            transition={{ duration: 0.25, ease: [0.25, 0.46, 0.45, 0.94] }}
+                            transition={{ duration: 0.25, ease: [0.25, 0.46, 0.45, 0.94] as const }}
                             className="md:hidden bg-white dark:bg-card border border-border/40 rounded-2xl mt-4 p-8 overflow-hidden shadow-xl"
                         >
                             <div className="flex flex-col gap-1 text-center">

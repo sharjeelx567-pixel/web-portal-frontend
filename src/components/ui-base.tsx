@@ -4,7 +4,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { cn } from '@/lib/utils' // I need to make sure I have this utility
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'onDrag' | 'onDragStart' | 'onDragEnd' | 'onAnimationStart'> {
     variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'glass';
     size?: 'sm' | 'md' | 'lg' | 'xl';
     children: React.ReactNode;
@@ -116,7 +116,7 @@ export function ScrollReveal({
             transition: {
                 duration,
                 delay,
-                ease: [0.25, 0.46, 0.45, 0.94],
+                ease: [0.25, 0.46, 0.45, 0.94] as const,
             },
         },
     }
@@ -200,7 +200,7 @@ export function RevealItem({
                     filter: "blur(0px)",
                     transition: {
                         duration: 0.55,
-                        ease: [0.25, 0.46, 0.45, 0.94],
+                        ease: [0.25, 0.46, 0.45, 0.94] as const,
                     },
                 },
             }}

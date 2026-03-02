@@ -59,7 +59,7 @@ export default function ContactPage() {
                             initial={{ opacity: 0, x: 16 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
+                            transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] as const }}
                             className="card-bg-2 p-6 md:p-8 rounded-2xl border border-border/50 space-y-6 backdrop-blur-sm shadow-sm"
                         >
                             <div className="space-y-2">
